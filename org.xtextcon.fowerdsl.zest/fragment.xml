@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<fragment>
+   <!-- Zest viewer -->
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            class="org.eclipse.xtext.example.fowlerdsl.ui.StatemachineExecutableExtensionFactory:org.eclipse.xtext.example.fowlerdsl.ui.zest.ShowInZestViewHandler"
+            commandId="org.eclipse.xtext.example.fowlerdsl.ui.zest.showInZestViewCommand">
+            <activeWhen>
+               <reference
+                     definitionId="org.eclipse.xtext.example.fowlerdsl.Statemachine.Editor.opened">
+               </reference>
+            </activeWhen>
+      </handler>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            categoryId="org.eclipse.ui.category.navigate"
+            description="Show Element in FXDiagram"
+            id="org.eclipse.xtext.example.fowlerdsl.ui.zest.showInZestViewCommand"
+            name="Show in Zest View">
+      </command>
+   </extension>
+   <extension point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="popup:#TextEditorContext?after=group.edit">
+         <command
+               commandId="org.eclipse.xtext.example.fowlerdsl.ui.zest.showInZestViewCommand"
+               icon="icons/lemon-icon.png"
+               style="push"
+               tooltip="Open in Zest View">
+         </command>  
+         </menuContribution>
+	</extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            category="org.eclipse.xtext.viewCategory"
+            class="org.eclipse.xtext.example.fowlerdsl.ui.StatemachineExecutableExtensionFactory:org.eclipse.xtext.example.fowlerdsl.ui.zest.ZestView"
+            icon="icons/lemon-icon.png"
+            id="org.eclipse.xtext.example.fowlerdsl.ui.zest.ZestView"
+            name="Zest View"
+            restorable="true">
+      </view>
+   </extension>
+   
+</fragment>

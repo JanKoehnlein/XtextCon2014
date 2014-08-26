@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Zest View for FowlerDSL
+Bundle-SymbolicName: org.xtextcon.fowerdsl.zest;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: itemis
+Fragment-Host: org.eclipse.xtext.example.fowlerdsl.ui;bundle-version="1.0.0"
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Export-Package: org.eclipse.xtext.example.fowlerdsl.ui.zest
+Require-Bundle: org.eclipse.zest.core,
+ org.eclipse.zest.layouts
